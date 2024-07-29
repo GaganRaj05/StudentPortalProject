@@ -106,5 +106,4 @@ Contact
 
 Your Name - itzmegagan2@gmail.com
 
-Project Link: https://github.com/GaganRaj05/student-portal
-
+Project Link: https://github.com/GaganRaj05/StudentPortalProject/tree/main
