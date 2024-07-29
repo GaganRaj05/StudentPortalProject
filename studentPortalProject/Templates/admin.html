@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            margin:0;
+            height: 140vh;
+        }
+        .nav_bar {
+            width: 100%;
+            height: 50px;
+            background-color: #174b62;
+            position: fixed;
+            top: 0;
+            padding: 10px;
+            margin-bottom: 150px;
+        }
+        .nav_bar p {
+            font-size: 30px;
+            margin:0 0px 10px 100px;
+            color: aliceblue;
+            font-family: sans-serif;
+        }
+        .contentHead {
+            height: 100px;
+            width: 400px;
+            border-bottom: 5px solid goldenrod ;
+            border-right: 5px solid goldenrod;
+            margin-top: 200px;
+            margin-left: 150px;
+            padding: 0;
+        }
+        .contentHead p {
+            font-size: 40px;
+            font-family: sans-serif;
+            margin: 0;
+            
+        }
+        .tContent {
+            margin-top: 150px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        table {
+            background-color: #174b62;
+            width: 90%;
+            color: aliceblue;
+            border: 2px aliceblue;
+        }
+        th {
+            width: 15%;
+            height: 70px;
+            text-align: center;
+            border: 2px solid #174b62;
+        }
+        td {
+            width: 15%;
+            height: 100px;
+            text-align: center;
+            border: 2px #174b62;
+        }
+        .btn {
+            margin-top: 50px;
+            margin-left: 85%;
+            width: 150px;
+        }
+        @media print {
+            .nav_bar {
+                display: none;
+            }
+            .contentHead {
+                display: block;
+                border: 0;
+            }
+            .btn {
+                display: none;
+            }
+            table {
+                color: black;
+                border: 2px solid black;
+            }
+            th {
+                border: 2px solid black;
+            }
+            td {
+                border: 2px solid black;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <div class="nav_bar">
+        <p>SDM'S ADMIN</p>
+    </div>
+    {%with messages = get_flashed_messages(with_categories = true)%}
+            {% if messages %}    
+                {%for category, message in messages%}
+                    <div class = "alert alert-{{category}}" id="error-message">
+                    {{message}}
+                    </div>
+                {%endfor%}
+            {%endif%}
+    {%endwith%}
+    
+    <div class="contentHead">
+        <p>Submitted Requests</p>
+    </div>
+    <div class="tContent">
+        <table>
+            
+            {%if details%}
+                <tr>
+                    <td>Apllication-Id</td>
+                    <td>F_name</td>
+                    <td>L_name</td>
+                    <td>Phone</td>
+                    <td>Email</td>
+                    <td>Query</td>
+                </tr>
+                
+                {%for data in details%}
+                    <tr>
+                        <td>{{data[0]}}</td>
+                        <td>{{data[1]}}</td>
+                        <td>{{data[2]}}</td>
+                        <td>{{data[3]}}</td>
+                        <td>{{data[4]}}</td>
+                        <td>{{data[5]}}</td>
+                    </tr>
+                
+                {%endfor%}
+                {%else%}
+                <tr>
+                    <td>No Requests Recieved</td>
+                </tr>
+            {%endif%}
+        </table>
+        
+    </div>
+    <button class="btn btn-info" id="eventNeeded">Print</button>
+    <script>
+        const btn = document.getElementById('eventNeeded')
+
+        btn.addEventListener('click',function() {
+            print();
+        })
+    </script>
+
+
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

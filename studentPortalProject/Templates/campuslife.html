@@ -1,0 +1,123 @@
+{%extends "layout.html"%}
+{%block styling%}
+    <style>
+        .campusHead {
+            width: 100%;
+        }
+        .campImg {
+            width: 100%;
+            height: 70vh;
+            background-image: url("https://static.wixstatic.com/media/5bfb6f_9ec86df3bd8b432b844785ef23ebc693~mv2_d_5616_3744_s_4_2.jpg/v1/fill/w_1225,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_9ec86df3bd8b432b844785ef23ebc693~mv2_d_5616_3744_s_4_2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .campImg p {
+            font-size: 80px;
+            color: rgb(255, 255, 255);
+            font-family: sans-serif;
+            font-weight: 600;
+           
+        }
+        .campContent {
+            
+            display: flex;
+            justify-content: center;
+        }
+        .card {
+            width: 400px;
+            height: 600px;
+            margin: 20px;
+            background-color: #f5f6f8;
+            padding:15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .largR {
+            height: 700px;
+            width: 400px;
+            background-color: #f5f6f8;
+        }
+        .high {
+            color: #174b62;
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin-left: 15px;
+            margin-bottom: 5px;
+        }
+        .low {
+            margin-left: 15px;
+            height: 100px;
+            width: 350px;
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            color: #174b62;
+            margin-bottom: 30px;
+        }
+        .campcontImg {
+            width:370px;
+            height: 370px;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+    </style>
+{%endblock%}
+{%block content%}
+    <section class="campusHead">
+        <div class="campImg">
+            <p>Student Services</p>
+        </div>
+        <div class="campContent">
+            <div  class="col">
+                <div class="card">
+                    <p class="high">Rules and Regulations</p>
+                    <p class="low">Understanding and adhering to the rules and regulations set forth by the college is crucial for maintaining a conducive learning environment. Familiarize yourself with our policies regarding academic conduct, campus safety, and community standards.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/84770f_c1f03a06ebe1411aae811d7fc0cf333a~mv2_d_8660_5773_s_4_2.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+                <div class="card ">
+                    <p class="high">Student Rights</p>
+                    <p class="low">As a student, you have certain rights guaranteed by the college. These include the right to a safe learning environment, access to resources and support services, and the freedom to express yourself within the bounds of respectful discourse.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/84770f_4df0ca397c1c46d9b10e6d847a1aa23c~mv2_d_8660_5773_s_4_2.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+                <div class="card">
+                    <p class="high">Multi Gym</p>
+                    <p class="low">Maintaining physical health is an important aspect of college life. Our state-of-the-art multi-gym facility offers a variety of equipment and fitness programs to help you stay active and energized throughout your academic journey.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/84770f_4e46a8bfbe0d4b7cbe2344361252cc79~mv2_d_6016_4016_s_4_2.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card largR">
+                    <p class="high">College Office</p>
+                    <p class="low">The college office serves as the administrative hub for various academic and administrative matters. From course registration to financial aid assistance, our dedicated staff is here to support you throughout your college journey.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/d83a82cdc9ce4c839fdee728bc3fd2f9.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+                <div class="card largR">
+                    <p class="high">
+                        Health Services</p>
+                    <p class="low">Your health and well-being are paramount to your success as a student. Our health services provide comprehensive medical care, counseling, and wellness programs to ensure that you can focus on your studies with peace of mind.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/fcb1209b19c34a08b3fecce3a0445b2a.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <p class="high">Cultural Events</p>
+                    <p class="low">Immerse yourself in the rich tapestry of cultural events hosted by the college community. From art exhibitions to music concerts, these events provide opportunities for intellectual exploration and creative expression.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/84770f_f65cd83301fd4a198641761ca12298b3~mv2_d_5760_3840_s_4_2.jpeg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpeg" alt="">
+                </div>
+                <div class="card ">
+                    <p class="high">Ladies Room</p>
+                    <p class="low">Our ladies' room facilities are designed to provide comfort and convenience for female students. Equipped with essential amenities and maintained for cleanliness, these spaces prioritize your comfort and well-being.</p>
+                    <img class="campcontImg" src="https://static.wixstatic.com/media/febd3a3c4e074e6b9343d651cc885803.jpg/v1/fill/w_390,h_428,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image-place-holder.jpg" alt="">
+                </div>
+            </div>
+            
+    </div>
+    </section>
+    
+
+{%endblock%}

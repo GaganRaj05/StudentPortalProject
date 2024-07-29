@@ -1,0 +1,173 @@
+{%extends "layout.html"%}
+{%block styling%}
+    <style>
+        .contHeadImg {
+            height: 80vh;
+            width: 100%;
+            background-image: url("https://static.wixstatic.com/media/b5d897a11e2d48479595d09c7cf15044.jpg/v1/fill/w_1225,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b5d897a11e2d48479595d09c7cf15044.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            font-size: 80px;
+            color: white;
+        }
+        .contN {
+            width: 100%;
+            height: 150px;
+            color: #174b62;
+            font-family: sans-serif;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+        }.card {
+            height: 220px;
+            width: 170px;
+            margin: 20px;
+        }
+        .col {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contContent {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .high {
+            font-size:20px;
+            font-family: sans-serif;
+            color: #174b62;
+            margin: 15px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+        .low {
+            margin:0 0 5px 15px;
+            color:#174b62;
+            font-size: 15px;
+            font-family: sans-serif;
+            
+        }
+        .qForm {
+            width: 350px;
+            height: 600px;
+            background-color: #f5f6f8;
+            color: #174b62;
+            padding-top: 30px;
+            font-family: sans-serif;
+        }
+        .inputField {
+            width: 280px;
+            height: 35px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 25px;
+        }
+        .qForm * {
+            display: block;
+        }
+        .input {
+            margin-left: 30px;
+        }
+        #res {
+            width:280px;
+            height: 150px;
+            resize: none;
+        }
+        .buttons {
+            width: 150px;
+            height: 40px;
+            background-color: #e60003;
+            color: #f5f6f8;
+            font-size: 20px;
+            margin-top: 20px;
+            margin-left: 25px;
+        }
+    </style>
+{%endblock%}
+{%block content%}
+    <section class="contHead">
+        <div class="contHeadImg">
+            <p>Contact</p>
+        </div>
+        {%with messages = get_flashed_messages(with_categories = true)%}
+            {% if messages %}    
+                {%for category, message in messages%}
+                    <div class = "alert alert-{{category}}" id="error-message">
+                    {{message}}
+                    </div>
+                {%endfor%}
+            {%endif%}
+            {%endwith%}
+        <div class="contN">
+            <p>Take Control of Your Future.</p>
+            <p>Contact SDM Polytechnic College</p>
+        </div>
+        
+        <div class="contContent">
+            <div class="col">
+                <div class="card">
+                    <p class="high">Address</p>
+                    <p class="low">SDM Polytechnic College,</p>
+                    <p class="low">Ujire, Belthangady,</p>
+                    <p class="low">574-240</p>
+                </div>
+                <div class="card">
+                    <p class="high">Registration office</p>
+                    <p class="low">@sdmpolytechnic.in</p>
+
+                </div>
+                <div class="card">
+                    <p class="high">Financial Aid Office</p>
+                    <p class="low">@sdmpolytechnic.in</p>
+                    <p class="low">Tel No: 098458 93731</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <p class="high">Opening Hours</p>
+                    <p class="low">Monday-Saturday</p>
+                    <p class="low">9:00AM - 5:00</p>
+                    
+                </div>
+                <div class="card">
+                    <p class="high">Admission Office</p>
+                    <p class="low">@sdmpolytechnic.in</p>
+                    <p class="low">Tel-No: 098807 24085</p>
+                </div>
+
+                <div class="card">
+                    <p class="high">International Students Office</p>
+                    <p class="low">Tel-No 098807 24085</p>
+                </div>
+            </div>
+            <div class="query">
+                <h1 style="color: #e60003;font-family:sans-serif;">Write your Query</h1>
+                <form class="qForm" method="POST" action="">
+                    {{form.firstName.label(class="input")}}
+                    {{form.firstName(value=fname,class="inputField",readonly="readonly")}}
+
+                    {{form.lastName.label(class="input")}}
+                    {{form.lastName(value=lname,class="inputField",readonly="readonly")}}
+
+                    {{form.phoneNo.label(class="input")}}
+                    {{form.phoneNo(class="inputField")}}
+
+                    {{form.email.label(class="input")}}
+                    {{form.email(class="inputField")}}
+                    {{form.reason.label(class="input")}}
+                    {{form.reason(class="inputField",id="res")}}
+
+                        {{form.submit(class="buttons")}}
+                </form>
+            </div>
+            
+        </div>
+    </section>
+{%endblock%}

@@ -1,0 +1,155 @@
+{%extends "layout.html"%}
+{%block styling%}
+    <style>
+        .academicsHead {
+            background-color: #f5f6f8;
+        }
+        .acadImg {
+            height: 80vh;
+            width: 100%;
+            background-image: url("https://static.wixstatic.com/media/5bfb6f_6620de8ead0140f08d21dd276ade7653~mv2_d_5540_3156_s_4_2.jpg/v1/fill/w_1225,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5bfb6f_6620de8ead0140f08d21dd276ade7653~mv2_d_5540_3156_s_4_2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .acadImg p{
+            font-weight: 700;
+            margin: 0;
+        }
+        .acadN {
+            width: 100%;
+            height: 120px;
+            
+            margin: 0;
+        }
+        .acadN p {
+            margin: 40px 0 40px 450px;
+            font-weight: 600;
+        }.resourceContent {
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .arow {
+            display: flex;
+        }
+        .card {
+            width: 450px;
+            height: 300px;
+            border: 2px solid #174b62;
+            background-color: white;
+        }
+        .high {
+            color: #ff0d0d;
+            display: block;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin-left:100px ;
+            margin-top: 50px;
+            font-size: 25px;
+        }
+        .low {
+            font-size: 15px;
+            font-weight: 500;
+            width: 250px;
+            height: 70px;
+            margin-left: 100px;
+            font-size: 15px;
+            color: #174b62;
+            font-family: sans-serif;
+        }
+        .cardT2 {
+            width: 600px;
+            height: 250px;
+            border: 2px solid #174b62;
+            background-color: white;
+            
+        }
+        .arow2{
+            display: flex;
+            justify-content: center;
+        }
+        .high2 {
+            color: #ff0d0d;
+            display: block;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin-left:200px ;
+            margin-top: 25px;
+            font-size: 25px;
+        }
+        .low2 {
+            font-size: 15px;
+            font-weight: 500;
+            width: 250px;
+            height: 70px;
+            margin-left: 200px;
+            font-size: 15px;
+            color: #174b62;
+            font-family: sans-serif;
+        }
+    
+    </style>
+{%endblock%}
+{%block content%}
+    <section class="academicsHead">
+        <div class="acadImg">
+            <p style="font-size:80px; color:white;font-family:sans-serif">Academics</p>
+        </div>
+        <div class="acadN">
+            <p style="color:#174b62;font-family:sans-serif;font-size:60px">Academic Resources</p>
+        </div>
+        <div class="resourceContent">
+            <div class="arow">
+                <div class="card">
+                    <p class="high">
+                        Lecture Notes
+                    </p>
+                    <p class="low">
+                        Access lecture notes from your courses here. These notes are essential for understanding key concepts covered in class and preparing for exams. You can download them in PDF format for offline studying.
+                    </p>
+                    
+                    <p style="margin-top:70px ;margin-left:100px;"><a style="text-decoration: none; color:#ff0d0d" href="https://drive.google.com/drive/folders/1HsJlkEk6T-qyrLty-ePL90uLjt_dh4IE?usp=drive_link">Click here to view Notes</a></p>
+
+                </div>
+                <div class="card">
+                    <p class="high">
+                        Lab Resources
+                    </p>
+                    <p class="low">
+                        Find resources for your laboratory sessions. These resources include experiment procedures, data sheets, and supplementary materials to enhance your learning experience. Additionally, you can access virtual lab simulations for remote learning
+                    </p>
+                    <p style="margin-top:70px ;margin-left:100px;"><a style="text-decoration: none; color:#ff0d0d" href="https://docs.google.com/document/d/1LTHYywKQn43nsrH8GHjF5JRxh31ZXyz0/edit?usp=drive_link">Click here to view Resorces</a></p>
+                </div>
+                <div class="card">
+                    <p class="high">Question Paper</p>
+                    <p class="low">
+                        Practice with previous years' question papers to get a better understanding of exam patterns and improve your problem-solving skills. We provide solutions for each question paper to help you assess your performance.
+                    </p>
+                    <p style="margin-top:70px ;margin-left:100px;"><a style="text-decoration: none; color:#ff0d0d" href="https://drive.google.com/drive/folders/1AxQERMtN06JEYnk1MOVDCzTuAVrb3mR5?usp=drive_link">Click here to view Previous QP's</a></p>
+                    </div>
+
+            </div>
+            
+        </div>
+        <div class="arow2">
+            <div class="cardT2">
+                <p class="high2">Video Links</p>
+                <p class="low2">
+                    Access similar video lectures delivered by youtube professionals. These videos cover various topics and provide additional insights to supplement your learning.
+                </p>  
+                <p style="margin-top:50px ;margin-left:200px;"><a style="text-decoration: none; color:#ff0d0d" href="https://youtu.be/J6mDkcqU_ZE?si=7w7R2YF_SdeqDQPK">Click here to view videos</a></p>   
+            </div>
+            <div class="cardT2" >
+                <p class="high2"> References</p>
+                <p class="low2">
+                    Explore recommended textbooks, articles, and other academic resources to deepen your understanding of subjects and broaden your knowledge base. 
+                </p> 
+                <p style="margin-top:50px ;margin-left:200px;color:#ff0d0d">Resources to be updated here</p>  
+            </div>
+        </div>
+    </section>
+{%endblock%}

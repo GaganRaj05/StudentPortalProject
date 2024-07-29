@@ -1,0 +1,61 @@
+{%extends "layout.html"%}
+{%block temp%}
+<div class="onesImage">
+    <p> Welcome to Student Space</p>
+</div>
+{%endblock%}
+{%block content%}
+{%with messages = get_flashed_messages(with_categories = true)%}
+{% if messages %}    
+    {%for category, message in messages%}
+        <div class = "alert alert-{{category}}" id="error-message">
+        {{message}}
+        </div>
+    {%endfor%}
+{%endif%}
+{%endwith%}
+    <section class="two">
+        <div class="Department_name">
+            <h1 style="font-size:50px;font-weight:600;margin-bottom:20px;">Faculty</h1>
+            <h2 style="font-weight: 100;">Computer Science Department</h2>
+        </div>
+        <div class="row">
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/dinesh.JPG')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Dinesha Poojary</p>
+                <p>User-Id: 003</p>
+            </div>
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/Varadaraj - SDM Polytechnic.jpg')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Vardharaj Ballal</p>
+                <p>User-Id: 005</p>
+            </div>
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/prithvi.JPG')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Prithvi Kiran</p>
+                <p>User-Id: 004</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/Renita V f.JPG')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Renita Velma Fernandes</p>
+                <p>User-Id: 1011</p>
+            </div>
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/Anushree .jpg')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Anushree BK</p>
+                <p>User-Id: 006</p>
+            </div>
+            <div class="rowElement">
+                <img src="{{url_for('static',filename='images/Rajesh.JPG')}}" alt="">
+                <p style="font-size:20px;font-weight:600;">Rajesh KA</p>
+                <p>User-Id: 1022</p>
+            </div>
+        </div>
+    </section>
+    <section class="three" >
+        <p style="color: #174b62; font-size:80px;font-weight:600;font-family:sans-serif">No Events Listed For Now</p>
+    </section>
+    
+{%endblock%}
