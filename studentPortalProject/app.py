@@ -41,3 +41,10 @@ def login():
             return redirect(url_for('home'))
     return render_template("login.html",form=form)
 
+
+@app.route("/home")
+def home():
+    if session.get('user_id') is None:
+        flash(f"Login Required","danger")
+        return redirect(url_for('login'))
+    return render_template("home.html")
